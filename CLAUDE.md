@@ -126,6 +126,7 @@ Escribe `mi-negocio/textos-meta.md`: por cada ángulo, un texto principal (2 a 5
 - **A mano (lo más seguro):** en el Administrador de anuncios, crea los anuncios dentro de la campaña de prueba y arrastra los videos de `30_ANUNCIOS`. Pon el mismo gancho en el mismo conjunto para no fragmentar el gasto.
 - **Con el conector de Meta (opcional):** si la persona tiene conectado "Meta Ads" en Claude, puedes intentar subirlos tú. Reglas: todo se crea **EN PAUSA**, nunca actives nada sin su OK explícito, y si la subida de video falla, vuelve al método a mano sin insistir.
 - **Ojo con el error #1815589** ("Creative Call To Action's Link Title and Link Description Are Deprecated"). Meta rechaza un anuncio de video cuando el botón lleva título o descripción adentro. Pasa al publicar, no al crear, y no siempre (en la cuenta de Imperio, de 5 anuncios iguales cayeron 2). Por eso: en video, el titular va como titular del video y el botón solo lleva el link; nunca pongas descripción. Si igual aparece, se rehace el creativo sin esos campos.
+- **Anuncios armados antes del 18-oct-2026: rearmarlos.** Las versiones anteriores del kit dejaban mal marcados los tiempos del audio del inicio. En el computador el video suena perfecto, pero Meta reprocesa el audio respetando esas marcas y el anuncio llegaba con el gancho mudo (unos 2 segundos de silencio al empezar). Si la persona ya subió anuncios de la fábrica, vuelve a armarlos con `python3 scripts/armar.py --rehacer` (mismos combos, mismo estilo) y reemplázalos en Meta.
 
 ## Si algo falla
 

@@ -348,13 +348,17 @@ def main():
                     capa, n_in = "[contit]", n_in + 1
                 grafo += f";{capa}format=yuv420p,{ETIQUETA_SDR}[v]"
                 salida_v = "[v]"
-                grafo += ";[ca]loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000"
+                # asetpts=N/SR/TB: el loudnorm entrega sus primeros 3 s de una vez y los paquetes
+                # del inicio quedaban mal marcados. En el computador sonaba bien, pero Meta respeta
+                # las marcas al reprocesar y el gancho llegaba con 2 s de silencio (16-oct-2026).
+                grafo += ";[ca]loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000,asetpts=N/SR/TB"
                 if a.musica:
                     cmd += ["-stream_loop", "-1", "-i", str(Path(a.musica).resolve())]
                     fade = max(total - 1.2, 0)
                     grafo += (f"[voz];[{n_in}:a]aresample=48000,volume={a.volumen_musica},"
                               f"afade=t=in:d=0.5,afade=t=out:st={fade:.2f}:d=1.2[mus];"
-                              f"[voz][mus]amix=inputs=2:duration=first:dropout_transition=0:normalize=0[a]")
+                              f"[voz][mus]amix=inputs=2:duration=first:dropout_transition=0:normalize=0,"
+                              f"asetpts=N/SR/TB[a]")
                     n_in += 1
                 else:
                     grafo += "[a]"
