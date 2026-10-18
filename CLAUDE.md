@@ -35,7 +35,7 @@ Graba UNA sesión leyendo un guion modular: ganchos, cuerpos y llamados a la acc
 
 La primera vez: `python3 scripts/doctor.py --arreglar --modelo small` (en Windows: `py scripts\doctor.py --arreglar --modelo small`). Crea `.venv` dentro del kit, instala lo necesario (faster-whisper, ffmpeg, Pillow) y descarga el modelo de transcripción a `.modelos/` (unos 500 MB, una sola vez). Todo queda dentro de la carpeta del kit: para desinstalar basta con borrarla. Repite hasta que diga LISTO.
 
-**Dónde vive el kit.** En la carpeta Documentos de la persona: en Mac es `~/Documents` (Finder la muestra como "Documentos"); en Windows, `%USERPROFILE%\Documents` o, si tiene OneDrive, `OneDrive\Documentos`. Si bajaste el ZIP, la carpeta queda como `imperio-fabrica-videos-main`: cámbiale el nombre a `imperio-fabrica-videos` antes de crear el `.venv`. Si Documentos se sincroniza con iCloud u OneDrive, avísale en una frase que sus videos van a ocupar espacio en la nube y ofrécele dejar el kit en su carpeta de usuario.
+**Dónde vive el kit.** En la carpeta Documentos de la persona: en Mac es `~/Documents` (Finder la muestra como "Documentos"); en Windows, `%USERPROFILE%\Documents` o, si tiene OneDrive, `OneDrive\Documentos`. Si bajaste el ZIP, la carpeta queda como `mm-kit-videos-main`: cámbiale el nombre a `mm-kit-videos` antes de crear el `.venv`. Si Documentos se sincroniza con iCloud u OneDrive, avísale en una frase que sus videos van a ocupar espacio en la nube y ofrécele dejar el kit en su carpeta de usuario.
 
 Después, siempre con el Python del kit:
 - Mac y Linux: `.venv/bin/python scripts/<script>.py`

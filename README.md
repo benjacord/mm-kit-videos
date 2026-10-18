@@ -36,10 +36,10 @@ explícame cada paso en español simple. Mantén una lista de tareas visible y v
 lo que terminas.
 
 1) DESCARGA EL KIT (en mi carpeta Documentos)
-   git clone https://github.com/benjacord/imperio-fabrica-videos.git
+   git clone https://github.com/benjacord/mm-kit-videos.git
    Si no hay git, baja este ZIP, descomprímelo ahí y deja la carpeta como
-   imperio-fabrica-videos (sin el "-main"):
-   https://github.com/benjacord/imperio-fabrica-videos/archive/main.zip
+   mm-kit-videos (sin el "-main"):
+   https://github.com/benjacord/mm-kit-videos/archive/main.zip
    Trabaja siempre dentro de esa carpeta y lee su CLAUDE.md antes de seguir.
 
 2) PREPARA MI COMPUTADOR (gratis, solo lo que falte)
@@ -63,7 +63,7 @@ Ten paciencia, asume que nunca he usado una terminal y usa solo este kit.
 
 ## Ya instalado: solo háblale
 
-Abre Claude Code en la carpeta `imperio-fabrica-videos` y pide lo que quieras en español.
+Abre Claude Code en la carpeta `mm-kit-videos` y pide lo que quieras en español.
 
 | Le dices | Qué pasa |
 |---|---|
